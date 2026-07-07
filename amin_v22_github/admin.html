@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>站長更新中心｜阿民天堂</title><link rel="stylesheet" href="assets/style.css"></head><body><div class="embers"></div><header class="topbar"><a class="brand" href="index.html"><span class="brand-main">阿民天堂</span><span class="brand-sub">LINEAGE 2.7</span></a><button class="menu-toggle">☰</button><nav class="nav"><a href="index.html"><b>首頁</b><small>HOME</small></a><a href="news.html"><b>最新公告</b><small>NEWS</small></a><a href="ranking.html"><b>排行榜</b><small>RANK</small></a><a href="server.html"><b>伺服器資訊</b><small>SERVER</small></a><a class="active" href="admin.html"><b>站長中心</b><small>ADMIN</small></a></nav><div class="top-actions"><a class="btn red" href="news.html">公告管理</a><a class="icon line" href="https://line.me/" target="_blank">LINE</a></div></header><section class="page-hero"><h1>站長更新中心</h1><p>不用改複雜程式，只要修改 data 資料檔，就能更新首頁公告、排行榜與伺服器資訊。</p></section><main class="page-wrap admin-wrap"><section class="panel admin-card"><h2>更新流程</h2><ol class="admin-steps"><li>進入 GitHub Repository：<b>amin-lineage</b></li><li>點開 <b>data</b> 資料夾</li><li>選擇要修改的 JSON 檔案</li><li>點右上角鉛筆 <b>Edit</b></li><li>修改內容後按 <b>Commit changes</b></li><li>等待 Cloudflare 約 30 秒自動部署</li></ol></section><section class="panel admin-card"><h2>公告資料：data/news.json</h2><p>用來控制首頁與公告區內容。</p><pre class="code-block">[
+  {
+    "date": "07/07",
+    "type": "公告",
+    "tag": "red",
+    "title": "阿民天堂正式開服"
+  }
+]</pre></section><section class="panel admin-card"><h2>伺服器資訊：data/server.json</h2><p>用來控制首頁左側伺服器狀態。</p><pre class="code-block">{
+  "name": "阿民天堂 2.7",
+  "status": "運行中",
+  "exp": "20 倍",
+  "drop": "2 倍",
+  "adena": "2 倍",
+  "weapon": "2 倍",
+  "online": "386 人"
+}</pre></section><section class="panel admin-card"><h2>排行榜資料：data/ranking.json</h2><p>可修改等級、PK、財富、血盟、BOSS 排行。</p><pre class="code-block">{
+  "level": [
+    ["宋家大佬", "Lv89"],
+    ["基努李維", "Lv88"]
+  ],
+  "pk": [
+    ["辣手", "128勝"],
+    ["暴力美學", "96勝"]
+  ]
+}</pre></section><section class="panel admin-card"><h2>注意事項</h2><ul class="admin-list"><li>JSON 的逗號、雙引號不能刪錯。</li><li>每一筆資料最後一行不要多加逗號。</li><li>修改前可以先複製備份原本內容。</li><li>如果網站沒有更新，請等待 Cloudflare 部署完成後重新整理。</li></ul></section></main><footer class="footer"><div class="foot-logo">阿民天堂<span>LINEAGE 2.7</span></div><div class="foot-main">站長更新中心<br><b>ADMIN GUIDE</b></div><div class="foot-small">© 阿民天堂。V21 管理教學版。</div><div class="age">15<small>輔15級</small></div></footer><script src="assets/script.js"></script></body></html>
