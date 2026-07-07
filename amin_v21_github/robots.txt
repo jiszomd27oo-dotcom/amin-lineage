@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://amin-lineage.jiszomd27oo.workers.dev/sitemap.xml
